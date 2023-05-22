@@ -42,7 +42,7 @@ function randomNumber(){
 document.getElementById('odd-button').addEventListener('click', function(){
     let userNumber = parseInt(document.getElementById('user-number').value);
     document.getElementById('pc-number').innerHTML ='il numero del computer è:'+' '+randomNumber()
-    if(sum(userNumber)){
+    if(sum(userNumber)==false){
         document.getElementById('output-dice').innerHTML = 'ha vinto: il giocatore! Il numero è dispari'
     }else{
         document.getElementById('output-dice').innerHTML = 'ha vinto: il computer! Il numero è pari'
@@ -53,7 +53,7 @@ document.getElementById('odd-button').addEventListener('click', function(){
 document.getElementById('even-button').addEventListener('click', function(){
     let userNumber = parseInt(document.getElementById('user-number').value);
     document.getElementById('pc-number').innerHTML ='il numero del computer è:'+' '+randomNumber()
-    if(sum(userNumber)==false){
+    if(sum(userNumber)){
         document.getElementById('output-dice').innerHTML = 'ha vinto: il giocatore! Il numero è pari'
     }else{
         document.getElementById('output-dice').innerHTML = 'ha vinto: il computer! Il numero è dispari'
