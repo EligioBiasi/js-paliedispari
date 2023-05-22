@@ -28,11 +28,14 @@ function isPalindrome(word){
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function randomNumber(){
-   return Math.floor(Math.random() * 5) + 1;
+    let valore=Math.floor(Math.random() * 5) + 1;
+    return valore;
 }
 // Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
     function sum(somma){
-        if((randomNumber()+somma)%2===1){
+        let randomNum=randomNumber();
+        document.getElementById('pc-number').innerHTML ='il numero del computer è:'+''+randomNum;
+        if((randomNum+somma)%2===1){
             return false
         }else{
             return true
@@ -41,7 +44,6 @@ function randomNumber(){
 // Dichiariamo chi ha vinto.
 document.getElementById('odd-button').addEventListener('click', function(){
     let userNumber = parseInt(document.getElementById('user-number').value);
-    document.getElementById('pc-number').innerHTML ='il numero del computer è:'+' '+randomNumber()
     if(sum(userNumber)==false){
         document.getElementById('output-dice').innerHTML = 'ha vinto: il giocatore! Il numero è dispari'
     }else{
@@ -52,7 +54,6 @@ document.getElementById('odd-button').addEventListener('click', function(){
 
 document.getElementById('even-button').addEventListener('click', function(){
     let userNumber = parseInt(document.getElementById('user-number').value);
-    document.getElementById('pc-number').innerHTML ='il numero del computer è:'+' '+randomNumber()
     if(sum(userNumber)){
         document.getElementById('output-dice').innerHTML = 'ha vinto: il giocatore! Il numero è pari'
     }else{
