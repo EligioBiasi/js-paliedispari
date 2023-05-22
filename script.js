@@ -1,9 +1,8 @@
 // Palidroma:
 
 // Chiedere all’utente di inserire una parola:
-const insertWord = document.getElementById('user-word').value;
 document.getElementById('button-word').addEventListener('click', function(){
-    console.log(insertWord)
+    let insertWord = document.getElementById('user-word').value;
     if(isPalindrome(insertWord)){
         document.getElementById('output-word').innerHTML='la tua parola è palindroma'
     }else{
