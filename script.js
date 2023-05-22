@@ -32,7 +32,7 @@ function randomNumber(){
 }
 // Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
     function sum(somma){
-        if((randomNumber()+somma)/2===1){
+        if((randomNumber()+somma)%2===1){
             return false
         }else{
             return true
